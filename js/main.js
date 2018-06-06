@@ -1,64 +1,47 @@
-const numbers = [32, 61, 18, 23, 5, 11, 94];
-const fruit = ['peach', 'apricot', 'pear', 'banana', 'apple', 'watermelon'];
-const mixed = new Array(23, 'Hello', true, undefined, null, {a:1, b:1}, new Date());
+var canvas = document.getElementById('canvas');
 
-let val;
+var ctx = canvas.getContext('2d');
 
-function over50(num){
-	return num > 50;
-}
+// var gradient = ctx.createRadialGradient(150, 70, 0, 100, 200, 70);
+//
+// gradient.addColorStop(0, 'Gold');
+// gradient.addColorStop(1, 'rgba(0, 150, 0, 0)');
+//
+// ctx.fillStyle = gradient;
+// ctx.fillRect(0, 0, 600, 300);
+//
+// ctx.strokeStyle = 'silver';
+// ctx.strokeRect(150, 75, 50, 50);
+//
+// ctx.clearRect(0, 0, 300, 150);
 
-val = numbers.find(over50);
+// ctx.beginPath();
+// ctx.strokeStyle = 'black';
+// ctx.moveTo(100, 100);
+// ctx.lineTo(80, 60);
+// ctx.lineTo(110, 80);
+// ctx.lineTo(125, 40);
+// ctx.lineTo(140, 80);
+// ctx.lineTo(170, 60);
+// ctx.lineTo(150, 100);
+// ctx.lineTo(150, 100);
+// ctx.bezierCurveTo(140, 90, 110, 90, 100, 100);
+// ctx.closePath();
+// ctx.stroke();
+// ctx.fillStyle = 'gold';
+// ctx.fill();
 
-const person = {
-	firstName: 'Roger',
-	lastName: 'Steves',
-	age: 33,
-	email: 'setver@aol.com',
-	hobbies: ['music', 'sports'],
-	address: {
-		city: 'Miami',
-		state: 'FL',
-	},
-	getBirthYear: function () {
-		return 2018 - this.age;
-	},
-};
+ctx.beginPath();
+ctx.moveTo(150, 0);
+ctx.lineTo(195, 130);
+ctx.lineTo(80, 50);
+ctx.lineTo(220, 50);
+ctx.lineTo(105, 130);
+ctx.lineTo(150, 0);
+ctx.stroke();
+ctx.fillStyle = 'red';
+ctx.fill('evenodd');
 
-val = person.firstName;
-val = person.lastName;
-val = person.age;
-val = person.email;
-val = person.hobbies[1];
-val = person.address.state;
-val = person.address.city;
-val = person.getBirthYear();
-
-const people = [
-	{name: 'John', age: 30},
-	{name: 'Mike', age:34},
-	{name: 'James', age:25},
-];
-
-for (let i = 0; i < people.length; i++) {
-	console.log(people[i].name);
-}
-
-// Dates and Times
-
-let dat;
-
-const today = new Date();
-
-let birthday = new Date('07-20-1999 11:12:10');
-
-birthday = new Date('August 14 2007 10:21:05');
-
-birthday.setMonth(5);
-birthday.setDate(27);
-birthday.setHours(4);
-birthday.setFullYear(2000);
-birthday.setMinutes(30);
-birthday.setSeconds(9);
-
-console.log(birthday);
+ctx.font = '30px Tahoma';
+ctx.textBaseline = 'hanging';
+ctx.fillText('Hello', 0, 30);
