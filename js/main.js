@@ -15,7 +15,7 @@ ctx.strokeRect(150, 75, 50, 50);
 
 ctx.clearRect(0, 0, 300, 150);
 
- ctx.beginPath();
+ctx.beginPath();
 ctx.strokeStyle = 'black';
 ctx.moveTo(100, 100);
 ctx.lineTo(80, 60);
